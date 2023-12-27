@@ -11,5 +11,6 @@ export async function startServer() {
         schema: await buildSchema({ resolvers: [bookResolver]})
     });
     apolloServer.applyMiddleware({ app, path: "/graphql" });
+     // en app me da un error entre express y apollo-server-express no entiendo como solucionarlo//
     return app;
 };
